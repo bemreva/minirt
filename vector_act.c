@@ -1,5 +1,6 @@
 #include "vector.h"
 #include <math.h>
+#include "geometry.h"
 
 t_vec3    vec_add(t_vec3 a, t_vec3 b)
 {
@@ -18,5 +19,6 @@ double    vec_dot(t_vec3 a, t_vec3 b)
 
 t_vec3    ray_at(t_ray ray, double t)
 {
-    return (vec_add(ray.origin, (t_vec3){ray.dir.x * t, ray.dir.y * t, ray.dir.z * t}));
+    return (vec_add(ray.p0, (t_vec3){ray.dir.x * t, ray.dir.y * t, ray.dir.z * t}));
 }
+

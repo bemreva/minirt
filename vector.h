@@ -11,6 +11,8 @@ typedef struct s_vec3
     double	z;
 }	t_vec3;
 
+
+
 typedef struct s_object
 {
     void    *img;
@@ -23,7 +25,7 @@ typedef struct s_object
 
 typedef struct s_ray
 {
-    t_vec3    origin;
+    t_vec3    p0;
     t_vec3    dir;
 }   t_ray;
 
